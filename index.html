@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Air Max Pulse | Step Into What Feels Good</title>
+    <meta name="description" content="Discover the Nike Air Max Pulse. Inspired by the energy of London's music scene, featuring next-level cushioning and bold design.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">NIKE</div>
+            <div class="preloader-bar-track">
+                <div class="preloader-bar" id="preloader-bar"></div>
+            </div>
+            <div class="preloader-count" id="preloader-count">0%</div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <svg class="swoosh-logo" viewBox="0 0 69 32" fill="currentColor" width="60" height="22">
+                    <path d="M68.56 4.05L28.2 28.37a10.22 10.22 0 01-10.46.69C13.93 27.2 1.67 20.93.3 20.25A.53.53 0 010 19.8a.52.52 0 01.35-.2l.51-.05c5.8-.47 30.06-1.47 38.78-8.44C46.78 5.49 44.55.13 38.38 0a12.08 12.08 0 00-8.47 3.64 113.14 113.14 0 00-6.07 6.62s7.67-4.62 13.5-4.34c3.87.18 5.1 2.85 3.28 5.6-2.52 3.8-12.52 7.15-23.3 8a35.2 35.2 0 01-4.13.07c-1.72-.09-3.87-.39-5.93-1.4A9.61 9.61 0 010 11.89c0-.6.32-1.75 1.06-1.2.36.27 3.63 2.37 8.67 3.2 15.03 2.49 26.55-3.07 34.82-9 7.33-5.26 14.8-6.33 18.83-2.71a8.38 8.38 0 015.18 1.87z"/>
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">New & Featured</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-icon-btn" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button class="nav-icon-btn" aria-label="Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================== -->
+    <!-- HERO: Tiger Scrollytelling Engine (800vh)      -->
+    <!-- ============================================== -->
+    <section class="hero-section" id="hero">
+        <div class="sticky-container">
+            <canvas id="ambient-canvas" class="canvas-ambient"></canvas>
+            <canvas id="tiger-canvas" class="canvas-tiger"></canvas>
+            <div class="hero-overlay">
+                <h1 class="hero-title" id="hero-title">HUNGRY<br>FOR MORE</h1>
+            </div>
+            <div class="scroll-cue" id="scroll-cue">
+                <span>Scroll to explore</span>
+                <div class="scroll-cue-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- MAIN POST-HERO CONTENT                         -->
+    <!-- ============================================== -->
+    <main class="main-content" id="main-content">
+
+        <!-- P1: First Look -->
+        <section class="section-first-look" id="first-look">
+            <div class="container text-center">
+                <span class="eyebrow reveal-up">First Look</span>
+                <h2 class="section-title reveal-up">NIKE AIR MAX PULSE</h2>
+                <p class="description reveal-up">
+                    The Air Max Pulse pulls inspiration from the London music scene, bringing an underground touch to the iconic Air Max line. Its textile-wrapped midsole and vacuum-sealed accents keep it looking fresh and clean.
+                </p>
+                <div class="button-group reveal-up">
+                    <a href="#" class="btn btn-primary">Notify Me</a>
+                    <a href="#" class="btn btn-outline">Shop Air Max</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- P2: Best of Air Max Carousel -->
+        <section class="section-carousel" id="carousel-section">
+            <div class="container">
+                <div class="carousel-header">
+                    <h3 class="carousel-title">Best of Air Max</h3>
+                    <div class="carousel-nav">
+                        <button class="nav-btn nav-prev" id="carousel-prev" aria-label="Previous">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                        </button>
+                        <button class="nav-btn nav-next" id="carousel-next" aria-label="Next">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-track" id="product-carousel">
+                    <article class="product-card">
+                        <div class="card-image-wrap">
+                            <img src="assets/images/airmax-pulse.png" alt="Nike Air Max Pulse" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-left">
+                                <h4 class="card-name">Nike Air Max Pulse</h4>
+                                <span class="card-category">Men's Shoes</span>
+                            </div>
+                            <span class="card-price">$150</span>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="card-image-wrap">
+                            <img src="assets/images/airmax-97.png" alt="Nike Air Max 97" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-left">
+                                <h4 class="card-name">Nike Air Max 97</h4>
+                                <span class="card-category">Women's Shoes</span>
+                            </div>
+                            <span class="card-price">$175</span>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="card-image-wrap">
+                            <img src="assets/images/airmax-plus.png" alt="Nike Air Max Plus" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-left">
+                                <h4 class="card-name">Nike Air Max Plus</h4>
+                                <span class="card-category">Men's Shoes</span>
+                            </div>
+                            <span class="card-price">$180</span>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="card-image-wrap">
+                            <img src="assets/images/airmax-90.png" alt="Nike Air Max 90" class="card-image" loading="lazy">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-left">
+                                <h4 class="card-name">Nike Air Max 90</h4>
+                                <span class="card-category">Older Kids' Shoes</span>
+                            </div>
+                            <span class="card-price">$100</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- P3: Cinematic Featured Banner -->
+        <section class="section-banner" id="banner-section">
+            <div class="banner-image-wrap">
+                <img src="assets/images/cheetah-forest.png" alt="Cheetah in forest" class="banner-img" loading="lazy">
+            </div>
+            <div class="banner-content text-center">
+                <h2 class="banner-title reveal-up">STEP INTO<br>WHAT FEELS GOOD</h2>
+                <a href="#" class="btn btn-primary btn-large reveal-up mt-2">Shop All Action</a>
+            </div>
+        </section>
+
+        <!-- P4: The Essentials -->
+        <section class="section-essentials" id="essentials-section">
+            <div class="container">
+                <h3 class="carousel-title mb-3">The Essentials</h3>
+                <div class="grid-3">
+                    <div class="essential-card">
+                        <div class="essential-image-wrap">
+                            <img src="assets/images/lifestyle-mens.png" alt="Men's Essentials" class="essential-img" loading="lazy">
+                        </div>
+                        <a href="#" class="btn btn-white abs-bottom-left">Men's</a>
+                    </div>
+                    <div class="essential-card">
+                        <div class="essential-image-wrap">
+                            <img src="assets/images/lifestyle-womens.png" alt="Women's Essentials" class="essential-img" loading="lazy">
+                        </div>
+                        <a href="#" class="btn btn-white abs-bottom-left">Women's</a>
+                    </div>
+                    <div class="essential-card">
+                        <div class="essential-image-wrap">
+                            <img src="assets/images/lifestyle-kids.png" alt="Kids' Essentials" class="essential-img" loading="lazy">
+                        </div>
+                        <a href="#" class="btn btn-white abs-bottom-left">Kids'</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================== -->
+    <!-- FOOTER                                         -->
+    <!-- ============================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5 class="footer-top-link"><a href="#">Find a Store</a></h5>
+                    <h5 class="footer-top-link"><a href="#">Become a Member</a></h5>
+                    <h5 class="footer-top-link"><a href="#">Send Us Feedback</a></h5>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Get Help</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">About Nike</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span>&copy; 2026 Nike, Inc. All Rights Reserved</span>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="#">Guides</a>
+                    <a href="#">Terms of Sale</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/TigerExperience.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

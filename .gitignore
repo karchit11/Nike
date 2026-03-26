@@ -1,0 +1,9 @@
+# System
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+
+# GSD docs
+SPEC.md
+STATE.md
